@@ -7,8 +7,8 @@ with sync_playwright() as p:
     #page.screenshot(path="test.png")
     #browser.close()
 
-    ustextbox = page.wait_for_selector('#username')
-    ustextbox.type('rao@company.sandbox')
+    usertextbox = page.wait_for_selector('#username')
+    usertextbox.type('rao@company.sandbox')
 
 
     pswdtextbox = page.wait_for_selector('#password')
@@ -17,4 +17,5 @@ with sync_playwright() as p:
 
     loginbutton = page.wait_for_selector('#Login')
     loginbutton.click()
-    page.wait_for_timeout(6000)
+
+    #page.wait_for_timeout(6000)
